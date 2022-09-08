@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog </title>
+</head>
+<body>
+    <%- include('../inc/navbar.ejs'); -%>
+    <ul>
+     <li>
+        <b><%= blog.title %></b><br>
+        <span><%= blog.snippet %> </span> 
+        <p><%= blog.body %> </p>
+        <button id="delete_btn" data-id="<%= blog.id %> ">delete blog</button>
+    </li>
+    </ul>
+    <script>
+        const deletBtn = document.getElementById('delete_btn');
+        deletBtn.addEventListener('click', function(e){
+            const endPoint = `/blogs/${deletBtn.dataset.id}`;
+            fetch(endPoint, {
+                method: 'DELETE'
+            }).then((response)=>{
+                    return response.json();
+            })
+            .then(data => window.location.href = data.redirect)
+            .catch(err=>console.log(err))
+        })
+    </script>
+</body>
+</html>

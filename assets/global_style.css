@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+#left_navbar-1::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: #b82c2c;
+    border-radius: 6px;
+}
+#left_navbar::-webkit-scrollbar{
+    width: 7px;
+    background: #F0F0F0;
+}
+#left_navbar::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #929EAE;
+}
+
+.content_wrapper {
+    margin-left: 300px;
+    width: calc(100% - 300px)
+}
+.my_container {
+    margin: 0 20px;
+}
+/*Top navbar for admin dashboards*/
+#top_navbar{
+    width: 100%;
+    display: flex;
+    height: 55px;
+    padding: 0 40px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+#top_navbar .page{
+    line-height: 55px; 
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color:#404D61;
+}
+#top_navbar .page::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #1682FD;
+    bottom: 0;
+    left: 0;
+}
+#top_navbar .top_navbar_links{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+#top_navbar .top_navbar_links a{
+    color: #929EAE;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none
+}
+#top_navbar .top_navbar_links a img{
+    display: inline-block;
+    margin-right: 6px;
+}
+.add_btn{
+    background-color: #00aca9;
+    width: 150px;
+    border-radius: 5px;
+    color: #FFF;
+    padding: 7px;
+    text-align: center;
+    border: 0;
+    outline: none;
+
+}
+/* Action navbar for dashboard admin */
+.action_navbar{
+
+}
+
+/* select list */
+.select_list{
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #C4C4C4;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 17px;
+    align-items: center;
+}
+.select_list li{
+    color: #404D61;
+    position: relative;
+}
+.select_list li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    border-radius: 3px 3px 0px 0px;
+    background-color: #1682FD;
+    bottom: 0;
+    left: 0;
+    transition: all .3s;
+    cursor: pointer
+}
+.select_list li:hover::after,
+.select_list li.active::after{
+    height: 4px
+}
+
+/* Action navbar For Admin */
+.action_navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.thumbnails {
+    margin: 20px 0;
+}
+
+.thumbnails h1 {
+    font-size: 22px;
+    display: inline-block;
+    margin-right: 5px;
+    color: #7E7E7E;
+}
+
+.thumbnails h1 a {
+    color: #404D61;
+    text-decoration: none;
+}
+.thumbnails p{
+    color: #404D61
+}
+
+/* // big devices (more than 1960px) */
+@media (min-width: 1960px) {
+    .content_wrapper {
+        margin-left: 300px;
+        width: calc(100% - 300px)
+    }
+    .my_container {
+        margin: 0 60px;
+    }
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    .my_container {
+        margin: 0 30px;
+    }
+    .content_wrapper {
+        margin-left: 0px;
+        width: 100%
+    }
+    #listshareholdersappend,
+    #listboardsignatorie,
+    #listcreditline,
+    #liststatutory,
+    #notification_table,
+    #AllLegalDoc
+    .loan_section{
+        overflow-x: scroll;
+    }
+}
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width:576px ) {
+    .my_container {
+        margin: 0 15px;
+    }
+    table, .table{
+        width: 1262px !important;
+    }
+}
+
+
+.buttons-collection,.buttons-excel,.buttons-pdf,.buttons-print{
+    background-color: #F9FBFF;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #7E7E7E;
+    border: 0;
+    outline: none;
+    text-decoration: none
+}
+/* show the filter */
+.steps_form .form_grp .namefile{
+    position: absolute;
+    top: 15px !important; 
+    left: 20px;
+    transition: 0.2s;
+    pointer-events: none;
+    background-color: #fff;
+    color: #8692A6;
+    font-weight:500;
+    padding: 0 5px;
+    z-index: 4;
+}
+.steps_form .multiple_input .form_grp .namefile{
+    top: 33px !important; 
+}
+.saved{
+    cursor:no-drop;
+    opacity: .5;
+}
+
+.champ-important{
+    color:red;
+}
+
+.tope{
+    top:-10px !important;
+    width:auto !important;
+}
+
+.hide_form{
+    display: none !important;
+}
+
+.tox .tox-statusbar__text-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    overflow: hidden;
+    display: none !important;
+}
+
+.tox-notifications-container{
+    display: none !important;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+.import_heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-bottom: 1px solid #E4E4E5;
+    padding:30px  20px;
+}
+.import_heading .import_btns{
+    display: flex;
+    gap: 10px;
+}
+.import_heading h2{
+    color: #404D61;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+}
+.import_heading .file_input{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #8692A6;
+    position: relative;
+    overflow: hidden;
+}
+.import_heading .file_input a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.import_heading .file_input:after{
+    content: 'Download termsheet';
+    position: absolute;
+    z-index: 2;
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    color: #8692A6;
+    line-height: 40px;
+    padding-left: 10px;
+    pointer-events: none;
+}
+.import_heading .file_input img{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.import_heading .sign{
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #8692A6;
+    display: inline-block;
+    color: #8692A6;
+    background-color: #FFF
+}
+
+
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: #FFF !important;
+    color: #7E7E7E !important;
+}
+
+.form-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: none;
+}
+
+#listeshareholders_info{
+    display: none !important;
+}
+.view_btn{
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    padding: 5px 10px;
+    color: #7E7E7E;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    width: 190px;
+    text-align: center;
+    border: 1px solid #B5B7C0;
+    height: 40px
+}
+
+.tox-tinymce{
+    border: 1px solid rgba(180, 187, 198, 0.5) !important;
+}
+.tox .tox-statusbar{
+    display: none;
+}
+
+.see_file{
+    font-size: 14px;
+    cursor: pointer;
+    color: #787878;
+    margin-left: 5px;
+}
+/*pegination by us*/
+.pagination_container{
+    display: flex;
+    display: flex;
+    height: 80Px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.pagination_container button{
+    background: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.pagination_container button.disabled_btn{
+    opacity: .5;
+    pointer-events: none;
+}
+.pagination_container button svg path{
+    transition: .3s all;
+}
+.pagination_container button:hover svg path{
+    fill: #00ACA9;
+}
+#pagination_text{
+    margin: 0;
+    color: #404D61;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+.error{
+    display: block;
+    font-size: 10px;
+    color: red;
+    margin: 5px;
+}
+.cancel_btn{
+    width: 110px;
+    padding: 7px;
+    background: none;
+    border: 1px solid #00ACA9;
+    border-radius: 3.3px;
+    color: #00ACA9;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
